@@ -22,12 +22,12 @@ abstract class Themes {
   }
 
   static ThemeData darkTheme() {
-    return ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: kbackgroundAndTextDark,
+    return ThemeData.dark().copyWith(  
+        scaffoldBackgroundColor: kgreyBackground,
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
           backgroundColor: kgreenDark,
-          foregroundColor: kbackgroundAndTextLight,
+          foregroundColor: kbackgroundAndTextDark,
           shadowColor: Colors.transparent,
           elevation: 0,
           splashFactory: NoSplash.splashFactory,

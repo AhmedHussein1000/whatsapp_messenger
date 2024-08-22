@@ -12,4 +12,5 @@ const Color klangBackLight = Color(0xFFF7F8FA);
 const Color klangBackDark = Color(0xFF222E37);
 const Color kbottomSheetLight = Color(0xFFF7F6F6);
 const Color kbottomSheetDark = Color(0xFF222E37);
+const Color kAuthAppbarTextDark = Color(0xFFE9EDEF);
 const Color kgreyBackground = Color(0xFF202C33);

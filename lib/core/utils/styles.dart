@@ -13,10 +13,19 @@ abstract class Styles {
         fontWeight: FontWeight.w500,
         color: SizeConfig.isLight ? kgreyLight : kgreyDark,
       );
+       static TextStyle styleSemiBold16(BuildContext context) => TextStyle(
+        fontSize: getResponsiveFontSize(context, fontSize: 16),
+        fontWeight: FontWeight.w600,
+        
+      );
 
   static TextStyle styleMedium18(BuildContext context) => TextStyle(
         fontSize: getResponsiveFontSize(context, fontSize: 18),
         fontWeight: FontWeight.w500,
+      );
+  static TextStyle styleSemiBold18(BuildContext context) => TextStyle(
+        fontSize: getResponsiveFontSize(context, fontSize: 18),
+        fontWeight: FontWeight.w600,
       );
   static TextStyle styleSemiBold20(BuildContext context) => TextStyle(
         fontSize: getResponsiveFontSize(context, fontSize: 20),
