@@ -17,6 +17,7 @@ class CustomTextField extends StatelessWidget {
     this.autoFocus,
     this.hintStyle,
     this.textStyle,
+    this.inputFormattersMaxLength,
   });
 
   final TextEditingController? controller;
@@ -30,11 +31,14 @@ class CustomTextField extends StatelessWidget {
   final bool? autoFocus;
   final TextStyle? hintStyle;
   final TextStyle? textStyle;
+  final int? inputFormattersMaxLength;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      cursorColor: kgreenDark,
       inputFormatters: [
+        LengthLimitingTextInputFormatter(inputFormattersMaxLength),
         FilteringTextInputFormatter.digitsOnly,
       ],
       controller: controller,

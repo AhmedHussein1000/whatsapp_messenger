@@ -23,8 +23,8 @@ class _LoginFormState extends State<LoginForm> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    countryController = TextEditingController(text: 'Egypt');
-    codeController = TextEditingController(text: '+20');
+    countryController = TextEditingController(text: 'Select your country');
+    codeController = TextEditingController(text: 'code');
     phoneController = TextEditingController();
   }
 
@@ -48,7 +48,8 @@ class _LoginFormState extends State<LoginForm> {
       return customAlertDialog(
           context, 'Please enter a valid Egyptian phone number with 11 digits');
     } else {
-      context.pushNamed(Routes.verification);
+      context.pushNamedAndRemoveUntil(Routes.verification,
+          predicate: (context) => false);
     }
   }
 
@@ -87,6 +88,7 @@ class _LoginFormState extends State<LoginForm> {
               Expanded(
                 child: CustomTextField(
                   controller: phoneController,
+                  inputFormattersMaxLength: 15,
                   hintStyle: Styles.styleSemiBold20(context).copyWith(
                       color: SizeConfig.isLight ? kgreyLight : kgreyDark),
                   hintText: 'Phone number',
